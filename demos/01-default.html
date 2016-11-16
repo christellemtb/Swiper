@@ -1,70 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Swiper demo</title>
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="../dist/css/swiper.min.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML Slideshow</title>
+<style>
 
-    <!-- Demo styles -->
-    <style>
-    body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        width: 500px;
-        height: 300px;
-        margin: 20px auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    </style>
+*{
+	margin:0;
+	padding:0;
+}
+
+#container{
+	width:800px;
+	position:relative;
+}
+
+#container .prevButton{
+	height:72px;
+	width:68px;
+	position:absolute;
+	background:url('../images/buttons.png') no-repeat;
+	top:30%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:left top;
+	left:0;
+margin-left: -20px;	
+font-size:32px; 
+color:#374b94;
+}
+
+#container .prevButton:hover{ background-position:left bottom;left:0; color:#92bc4e;}
+
+#container .nextButton{
+	height:72px;
+	width:68px;
+	position:absolute;
+	background:url('../images/buttons.png') no-repeat;
+	top:30%;
+	margin-top:-36px;
+	cursor:pointer;
+	z-index:2000;
+	background-position:right top;
+	right:0;
+margin-right: -20px;
+font-size:32px; color:#374b94;
+}
+
+#container .nextButton:hover{background-position:right bottom;right:0;color:#92bc4e;}
+
+#container ul{
+	width:800;
+	height:453px;
+	list-style:none outside none;
+	position:relative;
+	overflow:hidden;
+}
+
+#container li:first-child{
+	display:list-item;
+	position:absolute;
+}
+
+#container li{
+	position:absolute;
+	display:none;
+}
+
+/* Caption text */
+.text {
+font-family:arial light, arial;
+  color: #f2f2f2;
+	background-color:#374b94;
+  font-size: 12px;
+ border-radius: 5px;
+  padding: 8px 12px;
+  position: absolute;
+  left:33px;
+  top: 150px;
+  width: 30%;
+  text-align: center;
+}
+
+.legend {
+  position: absolute;
+  left:33px;
+  top: 20px;
+  width: 50%;
+  text-align: left;
+}
+
+.legend2 {
+ border-radius: 5px;
+  padding: 5px 9px;
+  position: absolute;
+  left:33px;
+  top: 110px;
+  width: 50%;
+  text-align: left;
+}
+
+.logo {
+  position: absolute;
+right:30px;
+  bottom: 50px;
+}
+
+a{color:white;
+text-decoration:none;}
+
+a:hover{color:#92bc4e}
+
+</style>
 </head>
 <body>
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
-            <div class="swiper-slide">Slide 10</div>
-        </div>
-    </div>
+<center>
+<br><br>
+<div id="container">
+	<ul>
+      	<li>
+			<img src="http://image.noelshack.com/fichiers/2016/40/1475664892-temoignage-olaneo.png" width='800' />
+			<div class="legend"><span style='color:white; font-family:arial light, arial;font-size:16px;'>"On est dans un système clé en main qui<br/> nous offre de la flexibilité, de la réactivité et <br/>surtout des résultats"</span></div>
+			<div class="legend2"><span style='color:white; font-family:arial light, arial; font-size:12px;'>- Olivier LECLERQ, fondateur d'Olanéo</span></div>
+			<div class="text"><a href='https://www.youtube.com/watch?v=RvvVrT2NW3I' target="_blank">DÉCOUVRER LE TÉMOIGNAGE</a></div>
+			<div class='logo'><img src='http://image.noelshack.com/fichiers/2016/40/1475670610-customlogo-gif.png' width='100'></div>
+		</li>
+        <li>
+			<img src="http://image.noelshack.com/fichiers/2016/40/1475843692-temoignagekk.png" width='800' />
+			<div class='legend'><span style='color: grey; font-family:arial light, arial;font-size:16px;'>Eyefreight optimise son activité <br/>commerciale avec <br/>Idxcel</span></div>
+			<div class="text"><a href='https://www.youtube.com/watch?v=TPF0XfUihew' target="_blank">DÉCOUVRER LE TÉMOIGNAGE</a></div>
+			<div class='logo'><img src='http://image.noelshack.com/fichiers/2016/40/1475680080-indexx.png' width='160'></div>		
+		</li>
+    </ul>
+      <span class="button prevButton">«</span>
+      <span class="button nextButton">»</span>
+</div>
+</center>
 
-    <!-- Swiper JS -->
-    <script src="../dist/js/swiper.min.js"></script>
+<script src="http://www.html5marketplace.com/slideshow/jquery-1.4.2.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper('.swiper-container');
-    </script>
+<script>
+$(window).load(function(){
+		var pages = $('#container li'), current=0;
+		var currentPage,nextPage;
+		var timeoutID;
+		var buttonClicked=0;
+
+		var handler1=function(){
+			buttonClicked=1;
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if($(this).hasClass('prevButton'))
+			{
+				if (current <= 0)
+					current=pages.length-1;
+				else
+					current=current-1;
+				nextPage = pages.eq(current);	
+
+				nextPage.css("marginLeft",-604);
+				nextPage.show();
+				nextPage.animate({ marginLeft: 0 }, 800,function(){
+					currentPage.hide();
+				});
+				currentPage.animate({ marginLeft: 604 }, 800,function(){
+					$('#container .button').bind('click',handler1);
+				});
+			}
+			else
+			{
+
+				if (current >= pages.length-1)
+					current=0;
+				else
+					current=current+1;
+				nextPage = pages.eq(current);	
+
+				nextPage.css("marginLeft",604);
+				nextPage.show();
+				nextPage.animate({ marginLeft: 0 }, 800,function(){
+				});
+				currentPage.animate({ marginLeft: -604 }, 800,function(){
+					currentPage.hide();
+					$('#container .button').bind('click',handler1);
+				});
+			}		
+		}
+
+		var handler2=function(){
+			if (buttonClicked==0)
+			{
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if (current >= pages.length-1)
+				current=0;
+			else
+				current=current+1;
+			nextPage = pages.eq(current);	
+			nextPage.css("marginLeft",604);
+			nextPage.show();
+			nextPage.animate({ marginLeft: 0 }, 800,function(){
+			});
+			currentPage.animate({ marginLeft: -604 }, 800,function(){
+				currentPage.hide();
+				$('#container .button').bind('click',handler1);
+			});
+			timeoutID=setTimeout(function(){
+				handler2();	
+			}, 4000);
+			}
+		}
+
+		$('#container .button').click(function(){
+			clearTimeout(timeoutID);
+			handler1();
+		});
+
+		timeoutID=setTimeout(function(){
+			handler2();	
+			}, 4000);
+		
+});
+
+</script>
 </body>
 </html>
